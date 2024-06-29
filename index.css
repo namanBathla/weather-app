@@ -1,0 +1,354 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: monospace;
+    color: white;
+    font-size: 20px;
+}
+
+.font-20{
+    font-size: 20px;
+}
+.medium-font{
+    font-size: 2rem;
+}
+.large-font{
+    font-size: 3rem;
+}
+.xl-font{
+    font-size: 5rem;
+}
+.bold{
+    font-weight: bold;
+}
+html{
+    scroll-behavior:smooth;
+}
+body{
+    /* background color must me applied to body and not main */
+    background-color: black;
+    /* width: 100vw; */
+    /* height: 100vh; */
+}
+
+/* --------------------------------------------------------------------------- */
+
+/* sidebar styling begins */
+#sidebar{
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 250px;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.642);
+    transition: left .4s linear;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 15px;
+    z-index: 10;
+    
+}
+#sidebar li{
+    width: 100%;
+    line-height: 40px;          /* to center text */
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#sidebar li:hover{
+    background-color: white;
+}
+#sidebar a{
+    margin-top: auto;
+    font-size: 22px;
+    font-weight:normal;
+    width: 100%;
+    height: 100%;
+    color: black;
+}
+
+#close-sidebar-btn i{
+    color: black;
+}
+
+/* -------------------------------------------------------------------------- */
+
+/* Navbar styling begins here */
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+}
+#navbar li{
+    transition: border-bottom .1s linear;
+    border-bottom: 3px solid transparent;      /* to avoid moving other elements */
+}
+#navbar li:hover{
+    border-bottom: 3px solid;
+}
+
+.header{
+    background-color: rgba(0, 0, 0, 0.444);
+    position: fixed;
+    z-index: 999;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 25px;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 10px;
+}
+#sidebar-toggle-btn{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+#default-temp-container{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+#default-temp-box #temp{
+    margin-left: 20px;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .font-20{
+        font-size: 18px;
+    }
+
+}
+
+@media screen and (min-width: 850px){
+    .hide{
+        display: none;
+    }
+    #sidebar-toggle-btn{
+        display: none;
+    }
+}
+
+/* collapse navbar */
+@media screen and (max-width: 850px){
+    #navbar-container{
+        display: none;
+    }
+    .xl-font{
+        font-size: 4rem;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .header{
+        gap: 40px;
+        justify-content: center;
+    }
+    .fa-location-dot, .fa-temperature-three-quarters{
+        font-size: 1rem;
+    }
+    #default-temp-box{
+        flex-direction: column;
+        padding-top: 20px;
+    }
+    .xl-font{
+        font-size: 3rem;
+    }
+}
+
+/* ----------------------------------------------------------------- */
+
+.main{
+    /* width: 100%; */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+    padding: 20px;
+}
+
+#center-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 10px;
+    text-align: center;
+    text-wrap: balance;
+}
+#center-box #button-box{
+    cursor: pointer;
+    gap: 25px;
+    padding: 8px 12px;
+    background-color: rgb(0, 123, 255);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+#center-box #button-box span{
+    color: white;
+}
+#center-box #button-box #arrow{
+    background-color: rgba(255, 255, 255);
+    padding: 4px 9px;
+    font-size: 15px;
+    color: blue;
+    text-align: center;
+    border-radius: 50%;
+}
+
+/* ------------------------------------------------------------------------------- */
+
+/* Background styling starts */
+
+#home-section::before{
+    pointer-events: none;
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    background: url("https://images.unsplash.com/photo-1483653364400-eedcfb9f1f88?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=745&ixid=MnwxfDB8MXxyYW5kb218MHx8Y2l0eXx8fHx8fDE3MTI3NjQzMjQ&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1530");
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+body::before{
+    /* z-index so that it goes behind black color */
+    z-index: -2;
+    pointer-events: none;   /* This block the pointer events on other elements */
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: url("https://images.unsplash.com/photo-1422393462206-207b0fbd8d6b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=745&ixid=MnwxfDB8MXxyYW5kb218MHx8Y2l0eXx8fHx8fDE3MTI3NjM2MzU&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1530");
+    background-repeat: no-repeat;
+    object-fit: cover;
+    opacity: .4;
+}
+
+
+/* ------------------------------------------------------------------------------- */
+
+/* Weather container styling */
+.white-text{
+    color: white;
+    font-size: 20px;
+}
+
+.flex-box{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.blur{
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px; */
+    /* box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px; */
+    backdrop-filter: blur(5px);
+}
+#weather-container{
+    background-color: rgba(0, 0, 0, 0.426);
+    /* min-width: 800px; */
+    padding: 30px 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.city-input{
+    padding: 10px 10px;
+    width: 400px;
+    border: 1px solid white;
+    border-radius: 5px;;
+    outline: none;
+    background: transparent;
+    color: white;
+    font-size: 20px;
+}
+.search-btn{
+    padding: 10px 15px;
+    background-color: lightgreen;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+#weather-details{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.weather-container-item{
+    gap: 50px;
+}
+
+#date-loc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#city-temp{
+    text-align: center;
+}
+
+/* FORECAST Section styling */
+#forecast-container{
+    background-color: rgba(0, 0, 0, 0.448);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+    gap: 20px;
+    border-radius: 15px;
+    flex-wrap: wrap;
+    /* transition: all .5s linear; */
+}
+#forecast-details{
+    display: none;
+    /* display: flex; */     /* using js */
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 20px;
+}
+
+.forecast-item{
+    background-color: rgba(0, 0, 0, 0.347);
+    width: 200px;
+    padding: 20px 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    /* backdrop-filter: blur(10px); */
+}
