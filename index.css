@@ -151,7 +151,8 @@ body{
 
 @media screen and (max-width: 500px){
     .header{
-        gap: 40px;
+        gap: 30px;
+        
 /*         justify-content: center; */
     }
     .fa-location-dot, .fa-temperature-three-quarters{
