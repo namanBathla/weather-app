@@ -156,9 +156,9 @@ body{
     .header{
         gap: 30px;
     }
-    #forecast-container{
+/*     #forecast-container{
         
-    }
+    } */
     .fa-location-dot, .fa-temperature-three-quarters{
         font-size: 1rem;
     }
