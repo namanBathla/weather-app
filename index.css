@@ -126,51 +126,6 @@ body{
 }
 
 
-@media screen and (max-width: 1000px) {
-    .font-20{
-        font-size: 18px;
-    }
-
-}
-
-@media screen and (min-width: 850px){
-    .hide{
-        display: none;
-    }
-    #sidebar-toggle-btn{
-        display: none;
-    }
-}
-
-/* collapse navbar */
-@media screen and (max-width: 850px){
-    #navbar-container{
-        display: none;
-    }
-    .xl-font{
-        font-size: 4rem;
-    }
-}
-
-@media screen and (max-width: 500px){
-    .header{
-        gap: 30px;
-    }
-/*     #forecast-container{
-        
-    } */
-    .fa-location-dot, .fa-temperature-three-quarters{
-        font-size: 1rem;
-    }
-    #default-temp-box{
-        flex-direction: column;
-        padding-top: 20px;
-    }
-    .xl-font{
-        font-size: 3rem;
-    }
-}
-
 /* ----------------------------------------------------------------- */
 
 .main{
@@ -283,6 +238,7 @@ body::before{
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     gap: 40px;
 }
 
@@ -412,8 +368,60 @@ body::before{
 }
 
 .input-field{
-    color: black;
-    border: none;
+    outline: none;
+    background: transparent;
+    border: 1px solid white;
     padding: 5px 10px;
     border-radius: 5px;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1000px) {
+    .font-20{
+        font-size: 18px;
+    }
+
+}
+
+@media screen and (min-width: 850px){
+    .hide{
+        display: none;
+    }
+    #sidebar-toggle-btn{
+        display: none;
+    }
+}
+
+/* collapse navbar */
+@media screen and (max-width: 850px){
+    #navbar-container{
+        display: none;
+    }
+    .xl-font{
+        font-size: 4rem;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .header{
+        gap: 30px;
+    }
+    .fa-location-dot, .fa-temperature-three-quarters{
+        font-size: 1rem;
+    }
+    #default-temp-box{
+        flex-direction: column;
+        padding-top: 20px;
+    }
+    .xl-font{
+        font-size: 3rem;
+    }
+
+    .input-box{
+        width: 270px;
+    }
+    .city-input{
+        width: 300px;
+    }
 }
