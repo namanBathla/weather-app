@@ -341,7 +341,7 @@ body::before{
 /* CONTACT section styling */
 #contact-container{
     background-color: rgba(0, 0, 0, 0.448);
-    padding: 30px 40px;
+    padding: 30px 20px;
     border-radius: 15px;
     /* text-align: center; */
     flex-wrap: wrap;
