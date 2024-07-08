@@ -1,5 +1,3 @@
-// import emailjs from 'emailjs-com';
-
 const apiKey = "7b8677daddbea75f506a42ccbbbd0cd6";
 const baseUrl = "https://api.openweathermap.org/data/2.5/weather?";
 const forecastBaseUrl = "https://api.openweathermap.org/data/2.5/forecast?";
@@ -255,6 +253,7 @@ contactForm.addEventListener("submit", (e) => {
         nameInput.value = "";
         emailInput.value = "";
         messageInput.value = "";
+        alert("Message sent succesfully...");
         console.log("Message sent succesfully...")
         console.log(contactFormValues);
     }, (error) => {
