@@ -1,3 +1,4 @@
+// import emailjs from 'emailjs-com';
 
 const apiKey = "7b8677daddbea75f506a42ccbbbd0cd6";
 const baseUrl = "https://api.openweathermap.org/data/2.5/weather?";
@@ -9,6 +10,8 @@ const defaultTemp = document.querySelector('#default-temp');
 
 // const egUrl = "https://api.openweathermap.org/data/2.5/weather?q={city}&appid={apiKey}&units=metric";
 
+const searchMessage = document.querySelector('#search-msg');
+searchMessage.style.display = 'block';
 
 async function getDefaultTemperature(){
     const city = 'New Delhi';
@@ -39,13 +42,13 @@ const temperatures = document.querySelectorAll('.temperature');
 const humidity = document.querySelector('#humidity');
 const windSpeed = document.querySelector('#wind-speed');
 const getWeatherBtn = document.querySelector('#search-weather-btn');
-const inputField = document.querySelector('#city-for-weather');
+const cityInputField = document.querySelector('#city-for-weather');
 const weatherDetails = document.querySelector('#weather-details');
 const date = document.querySelector('#current-date');
 
 
 getWeatherBtn.addEventListener('click', () => {
-    let c = inputField.value.trim();
+    let c = cityInputField.value.trim();
     getTemperature(c);
     setCurrentDate();
     getForecast(c);
@@ -201,6 +204,8 @@ function createForecastItem(date, temp, desc, imgCode){
     forecastItem.appendChild(forecastDescription);
 
     forecastDetailsBox.appendChild(forecastItem);
+
+    searchMessage.style.display = 'none';
 }
 
 function createTempItem(date, time, temp, imgCode){
@@ -220,3 +225,40 @@ function createTempItem(date, time, temp, imgCode){
     parentDiv.appendChild(tempDiv);
     parentDiv.appendChild(tempDiv);
 }
+
+
+// EmailJS setup
+const contactForm = document.querySelector('#contact-form');
+const SendBtn = document.querySelector('#send-btn');
+const nameInput = document.querySelector('#user-name');
+const emailInput = document.querySelector('#user-email');
+const messageInput = document.querySelector('#user-message');
+
+const emailPublicKey = "RftnEOIC0hdvbemP8";
+const emailServiceId = "service_1kzw2fh";
+const emailTemplateId = "template_1nzds9s";
+
+emailjs.init(emailPublicKey);
+
+contactForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const contactFormValues = {
+        from_name: nameInput.value,
+        from_email: emailInput.value,
+        message: messageInput.value,
+    }
+
+    emailjs.send(emailServiceId, emailTemplateId, contactFormValues)
+    .then(() => {
+        // clear all input fields
+        nameInput.value = "";
+        emailInput.value = "";
+        messageInput.value = "";
+        console.log("Message sent succesfully...")
+        console.log(contactFormValues);
+    }, (error) => {
+        console.log("Failed...", error);
+    })
+});
+
