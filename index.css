@@ -30,8 +30,7 @@ html{
 body{
     /* background color must me applied to body and not main */
     background-color: black;
-    /* width: 100vw; */
-    /* height: 100vh; */
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -95,18 +94,25 @@ body{
 #navbar li:hover{
     border-bottom: 3px solid;
 }
-
+footer{
+    background-color: rgba(0, 0, 0, 0.444);
+    z-index: 999;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+}
 .header{
     background-color: rgba(0, 0, 0, 0.444);
     position: fixed;
     z-index: 999;
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 20px 25px;
-/*     flex-wrap: wrap; */
-/*     text-align: center; */
+    padding: 10px 25px;
     gap: 10px;
+    margin-bottom: 20px;
 }
 #sidebar-toggle-btn{
     background: none;
@@ -135,7 +141,7 @@ body{
     justify-content: center;
     align-items: center;
     margin-bottom: 3rem;
-    padding: 20px;
+    padding: 40px 0;
 }
 
 #home-section{
@@ -202,7 +208,7 @@ body::before{
     top: 0;
     left: 0;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     background: url("https://images.unsplash.com/photo-1422393462206-207b0fbd8d6b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=745&ixid=MnwxfDB8MXxyYW5kb218MHx8Y2l0eXx8fHx8fDE3MTI3NjM2MzU&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1530");
     background-repeat: no-repeat;
     object-fit: cover;
