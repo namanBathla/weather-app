@@ -16,7 +16,7 @@
     <nav class="hide">
         <ul id="sidebar" class="blur">
             <li id="close-sidebar-btn"><i class="fa-solid fa-arrow-left"></i></li>
-            <li><a href="#home-section"><i></i>Home</a></li>
+            <li><a href="index.html"><i></i>Home</a></li>
             <li><a href="#weather-section"><i></i>Weather</a></li>
             <li><a href="#forecast-section"><i></i>Forecast</a></li>
             <li><a href="#about-section"><i></i>About</a></li>
@@ -29,7 +29,7 @@
         <button id="sidebar-toggle-btn"><i class="fa-solid fa-bars fa-xl"></i></button>
         <nav id="navbar-container">
             <ul id="navbar">
-                <li><a class="font-20" href="#home-section"><i></i>Home</a></li>
+                <li><a class="font-20" href="index.html"><i></i>Home</a></li>
                 <li><a class="font-20" href="#weather-section"><i></i>Weather</a></li>
                 <li><a class="font-20" href="#forecast-section"><i></i>Forecast</a></li>
                 <li><a class="font-20" href="#about-section"><i></i>About</a></li>
@@ -39,7 +39,7 @@
         <div id="default-temp-container">
             <div>
                 <span><i class="fa-solid fa-location-dot "></i></span>
-                <span class="font-20">New Delhi</span>
+                <span class="font-20" id="default-city">New Delhi</span>
             </div>
             <div>
                 <span><i class="fa-solid fa-temperature-three-quarters"></i></span>
@@ -94,6 +94,14 @@
                             <p class="medium-font temperature" id="current-temp"></p>
                         </div>
                     </div>
+                    <!-- <div class="flex-box">
+                        <i class="fa-solid fa-location-dot fa-xl"></i>
+                        <div class="white-text city"></div>
+                    </div>
+                    <div class="flex-box">
+                        <i class="fa-solid fa-temperature-three-quarters fa-xl"></i>
+                        <div class="white-text temperature" id="temperature"></div>
+                    </div> -->
                 </div>
 
                 <div class="flex-box weather-container-item">                    
@@ -140,13 +148,13 @@
     <div class="main" id="about-section">
         <div class="blur" id="about-container">
             <h1 class="medium-font">About me</h1>
-            <p >
+            <p  class="font-20">
                 I am a passionate Computer Science enthusiast currently pursuing my Bachelor of Technology degree in Computer Science at Chandigarh University, Mohali.
             </p>
-            <p>
+            <p class="font-20">
                 My academic journey has been driven by a deep-seated interest in software engineering, data structures, and algorithms, areas where I constantly seek to expand my expertise. I actively engage in practical projects and hands-on learning experiences to solidify my understanding. 
             </p>
-            <p>
+            <p class="font-20">
                 Additionally, I am an enthusiastic learner, continuously striving for self-improvement in both my professional and personal endeavors.
             </p>
         </div>
