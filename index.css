@@ -124,6 +124,7 @@ body{
 }
 
 
+
 /* ----------------------------------------------------------------- */
 
 .main{
@@ -415,6 +416,9 @@ footer{
         width: 300px;
     }
     footer{
+        font-size: 15px;
+    }
+    #default-temp, #default-city{
         font-size: 15px;
     }
 }
