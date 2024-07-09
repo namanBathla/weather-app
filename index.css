@@ -102,7 +102,7 @@ body{
     width: 100vw;
     display: flex;
     justify-content: space-between;
-    padding: 10px 25px;
+    padding: 15px 25px;
     gap: 10px;
     margin-bottom: 20px;
 }
