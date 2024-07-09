@@ -181,7 +181,7 @@ body::before{
     position: fixed;
     top: 0;
     left: 0;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     background: url("https://images.unsplash.com/photo-1422393462206-207b0fbd8d6b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=745&ixid=MnwxfDB8MXxyYW5kb218MHx8Y2l0eXx8fHx8fDE3MTI3NjM2MzU&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1530");
     background-repeat: no-repeat;
