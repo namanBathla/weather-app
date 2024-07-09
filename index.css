@@ -99,7 +99,7 @@ body{
     background-color: rgba(0, 0, 0, 0.444);
     position: fixed;
     z-index: 999;
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: space-between;
     padding: 10px 25px;
@@ -355,7 +355,7 @@ body::before{
 footer{
     background-color: rgba(0, 0, 0, 0.444);
     z-index: 999;
-    width: 100%;
+    width: 100vw;
     padding: 15px 0;
     text-align: center;
     position: absolute;
@@ -399,8 +399,8 @@ footer{
         font-size: 1rem;
     }
     #default-temp-box{
-        flex-direction: column;
-        padding-top: 20px;
+        /* flex-direction: column; */
+        padding-top: 10px;
     }
     .xl-font{
         font-size: 3rem;
